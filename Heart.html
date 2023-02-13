@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сердечко</title>
+</head>
+<body>
+    <div class="heart"></div>
+    <h1 class="neonText" id="love">I</h1>
+    <h1 class="neonText" id="love1">you</h1>
+
+    <style type="text/css">
+
+        body{
+             font-size: 18px;
+            font-family: "Helvetica Neue", sans-serif; 
+            background-color: #202020;
+        }
+        .neonText {
+            animation: flicker 1.5s infinite alternate;
+            color: red;
+          }
+          
+          h1 {
+            font-size: 4.2rem; 
+          }
+          
+          /* Flickering animation */
+          @keyframes flicker {
+              
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+          
+                text-shadow:
+                0 0 4px #fb0303,
+                0 0 11px #d70d0d,
+                0 0 19px #e51c1c,
+                0 0 40px rgb(236, 17, 17),
+                0 0 80px rgb(239, 16, 16),
+                0 0 90px rgb(251, 15, 15),
+                0 0 100px rgb(229, 13, 13),
+                0 0 150px rgb(236, 6, 6);
+            
+            }
+            
+            20%, 24%, 55% {        
+                text-shadow: none;
+            }    
+          }
+          #love1{
+            margin-top: 600px;
+          }
+          h1{
+            text-align: center;
+            margin-right: 70px;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+        .heart:before,
+        .heart:after{
+            position: absolute;
+            content: "";
+            margin-top: 200PX;
+            margin-left: 400px;
+            left: 300px;
+            top: 0;
+            width:300px;
+            height: 480px;
+            background-color: red;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            border-radius: 250px 250px 0 0;
+        }
+        .heart:after{
+            left: 0;
+            transform-origin: 100% 100%;
+            transform: rotate(45deg);
+
+        }
+    </style>
+
+</body>
+</html>
